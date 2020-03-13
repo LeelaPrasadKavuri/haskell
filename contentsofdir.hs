@@ -9,7 +9,6 @@ import System.Directory (doesDirectoryExist, getDirectoryContents)
 import System.FilePath ((</>))
 
 getRecursiveContents :: FilePath -> IO [FilePath]
-
 getRecursiveContents topdir = do
   names <- getDirectoryContents topdir
   let properNames = filter (`notElem` [".", ".."]) names
@@ -23,7 +22,6 @@ getRecursiveContents topdir = do
 
 
 simpleFind :: (FilePath -> Bool) -> FilePath -> IO ()
-
 simpleFind p path = do
   names <- getRecursiveContents path
   let y= filter p names 
