@@ -1,2 +1,1 @@
-# haskell
-my haskell programs 
+# haskell programs 
